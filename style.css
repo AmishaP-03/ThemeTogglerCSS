@@ -1,0 +1,48 @@
+body {
+    background-color: darksalmon
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.theme-toggle-switch {
+    position: relative;
+    width: 70px;
+    height: 40px;
+}
+
+/* Hiding the checkbox */
+.theme-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: wheat;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* The CSS ::before pseudo-element inserts some content before the content of the specified element */
+/* The inserted content is still inside the specified element. The inserted content is added before the other content inside. */
+/* https://www.w3schools.com/cssref/sel_before.php */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
