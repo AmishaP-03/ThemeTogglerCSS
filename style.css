@@ -1,10 +1,32 @@
+/* It is a CSS pseudo class used to selects the root element of the document: <html> in the case of HTML */
+/* Can be useful for declaring global CSS variables */
+:root {
+    --bg-color: darksalmon;
+    --text-color: wheat;
+}
+
+[data-theme="dark"] {
+    --bg-color: black;
+    --text-color: #a2b5ea;
+}
+
+html, body {
+    height: 100%;
+}
+
+
 body {
-    background-color: darksalmon
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
+    padding: 2rem 2rem 0 0;
 }
 
 .theme-toggle-switch {
@@ -27,7 +49,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: wheat;
+    background-color: var(--text-color);
     transition: 0.4s;
     border-radius: 34px;
 }
@@ -45,4 +67,25 @@ header {
     background-color: white;
     transition: 0.4s;
     border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+main {
+    height: 85%;
+    color: var(--text-color);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0 0;
+}
+
+
+footer {
+    background-color: var(--text-color);
+    height: 1rem;
 }

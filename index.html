@@ -14,21 +14,23 @@
         1. A hidden checkbox controls the toggle state.
         2. A styled <span class="slider"> acts as the visual part of the switch.
         3. When the checkbox is checked, it triggers a style change via the sibling selector input:checked + .slider. -->
-        <section class="theme-toggle-switch">
-            <input type="checkbox">
+
+        <label class="theme-toggle-switch">
+            <input type="checkbox" id="theme-checkbox">
             <span class="slider"></span>
-        </section>
+        </label>
+
+        <!-- It is important to wrap the above span and input in a label so as to make the entire wrapped area clickable.
+        Clicking anywhere on the label will toggle the checkbox -->
     </header>
 
     <main>
-
+        <h1>Welcome to the Theme Toggle Page</h1>
+        <h2>This page supports both light and dark themes. Use the toggle to switch!</h2>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <script src="index.js"></script>
-    
 </body>
 </html>
