@@ -25,8 +25,9 @@ body {
 
 header {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    padding: 2rem 2rem 0 0;
+    padding: 1rem 2rem 0 0;
 }
 
 .theme-toggle-switch {
@@ -71,6 +72,11 @@ header {
 
 input:checked + .slider:before {
     transform: translateX(25px);
+}
+
+#theme-label {
+    font-weight: 500;
+    padding: 0 0 0 1rem;
 }
 
 main {
